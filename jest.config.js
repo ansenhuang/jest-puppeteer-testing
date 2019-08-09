@@ -7,13 +7,10 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
-  globals: {
-    'ts-jest': {
-      extends: './babel.config.js',
-    },
-  },
   preset: 'jest-puppeteer',
   setupFilesAfterEnv: [
-    '<rootDir>/config/setupAfterEnv.js',
+    'expect-puppeteer',
+    '<rootDir>/tests/setup/expect-image-snapshot.ts',
+    '<rootDir>/tests/setup/enhance-puppeteer.ts',
   ],
 };

@@ -4,14 +4,16 @@
     "tslint-config-prettier",
     "tslint-plugin-prettier"
   ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "**/*.d.ts"
+    ]
+  },
   "rules": {
-    "prettier": [true, {
-      "printWidth": 120,
-      "tabWidth": 2,
-      "semi": true,
-      "singleQuote": true,
-      "trailingComma": "all",
-      "arrowParens": "always"
-    }]
+    "prettier": true,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "interface-name": false
   }
 }
